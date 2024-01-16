@@ -1,0 +1,1272 @@
+/*&&&&&&&&&&&&  */
+
+.body-layer-up {
+  height: 50vh;
+  bottom: 0;
+  height: 50%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 1.5s;
+  animation: cover2 2s;
+  background-color: #fff;
+  z-index: -3;
+}
+
+@keyframes cover2 {
+  0% {
+    height: 50%;
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    height: 0%;
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+.body-layer-down {
+  height: 50vh;
+  height: -50%;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 1.5s;
+  animation: cover1 2s;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -2;
+}
+
+@keyframes cover1 {
+  0% {
+    height: -50%;
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+.loading {
+  height: 50vh;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  border-top: 10px solid #eee;
+  border-bottom: 10px solid #eee;
+  border-left: 10px solid #eee;
+  border-right: 10px solid #000;
+  transition: all 1s;
+  animation: spin 2s linear;
+  opacity: 0;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/*&&&&&&&&&&&&  */
+
+/** General Style  */
+Body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-padding-top: 3.8125rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-header {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.section-header h3 {
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+}
+.section-header h3::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../Images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+
+.bg-gray {
+  background: #f7f7f7;
+}
+
+.btn {
+  --bs-btn-padding-x: 2.5rem;
+  --bs-btn-padding-y: 0.625rem;
+  --bs-btn-font-family: ;
+  --bs-btn-font-size: 0.8125rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.1607rem;
+  --bs-btn-color: #eee;
+  --bs-btn-bg: #1c1c1c;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-color: #1c1c1c;
+  --bs-btn-border-radius: var(--bs-border-radius);
+  --bs-btn-hover-border-color: #1c1c1c;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem
+    rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
+  display: inline-block;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  font-family: var(--bs-btn-font-family);
+  font-size: var(--bs-btn-font-size);
+  font-weight: var(--bs-btn-font-weight);
+  line-height: var(--bs-btn-line-height);
+  color: var(--bs-btn-color);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+  background-color: var(--bs-btn-bg);
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  color: #1c1c1c;
+  background-color: #eee;
+  border-color: 1px solid #1c1c1c;
+}
+
+.btn-bg {
+  background: #1c1c1c;
+  color: #eee;
+}
+.btn-bg:hover {
+  background: transparent !important;
+  color: #343434 !important;
+}
+
+/** End General Style  */
+
+/*? NavBar Style */
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+}
+
+.navbar-brand {
+  padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: var(--bs-navbar-brand-padding-y);
+  margin-right: var(--bs-navbar-brand-margin-end);
+  font-size: 1.125rem;
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 800;
+}
+
+.navbar .logo {
+  letter-spacing: 1px !important;
+}
+
+.navbar {
+  --bs-navbar-padding-x: 1rem;
+  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-hover-color: none;
+  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-brand-font-size: 1.25rem;
+  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-hover-color: none;
+  --bs-navbar-nav-link-padding-x: 0.7rem;
+  --bs-navbar-toggler-padding-y: 0.25rem;
+  --bs-navbar-toggler-padding-x: 0;
+  --bs-navbar-toggler-font-size: 1rem;
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --bs-navbar-toggler-border-color: 0;
+  --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+  --bs-navbar-toggler-focus-width: 0;
+  --bs-navbar-toggler-transition: all 0.5s;
+  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--bs-navbar-active-color);
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 30px;
+  left: 0;
+  bottom: 10px;
+  background-color: #222222;
+  transition: all 1s 1s;
+  animation: nav-b-border 0.9s alternate;
+}
+
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: 0.875rem;
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+  line-height: 1.25rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-link {
+    transition: none;
+  }
+}
+
+/*? EndNavBar Style */
+
+/*! Home Style */
+
+#home {
+  background-image: url(../Images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#home .layer {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 222;
+}
+
+#home .hello {
+  font-size: 3.125rem;
+  font-weight: 900;
+}
+
+#home .social-icons {
+  font-size: 0.875rem;
+}
+
+#home .social-icons a {
+  color: #fff;
+}
+
+h1 span::after {
+  content: "|";
+  animation: typing 7s infinite alternate both;
+  font-weight: 400;
+}
+
+@keyframes typing {
+  0.571428571428571% {
+    content: "Larry Daniels| ";
+  }
+  1.14285714285714% {
+    content: "Larry Daniels| ";
+  }
+  1.71428571428571% {
+    content: "Larry Daniels| ";
+  }
+  2.28571428571429% {
+    content: "Larry Daniels| ";
+  }
+  2.85714285714286% {
+    content: "Larry Daniels| ";
+  }
+  3.42857142857143% {
+    content: "Larry Daniels| ";
+  }
+  4% {
+    content: "Larry Daniels| ";
+  }
+  4.57142857142857% {
+    content: "Larry Daniels| ";
+  }
+  5.14285714285714% {
+    content: "Larry Daniels| ";
+  }
+  5.71428571428571% {
+    content: "Larry Daniels| ";
+  }
+  6.28571428571428% {
+    content: "Larry Daniels| ";
+  }
+  6.85714285714285% {
+    content: "Larry Daniels| ";
+  }
+  7.42857142857143% {
+    content: "Larry Daniels| ";
+  }
+  8% {
+    content: "Larry Daniels| ";
+  }
+  8.57142857142857% {
+    content: "Larry Daniels| ";
+  }
+  9.14285714285714% {
+    content: "Larry Daniels| ";
+  }
+  9.71428571428571% {
+    content: "Larry Daniel|";
+  }
+  10.2857142857143% {
+    content: "Larry Danie|";
+  }
+  10.8571428571429% {
+    content: "Larry Dani|";
+  }
+  11.4285714285714% {
+    content: "Larry Dan|";
+  }
+  12% {
+    content: "Larry Da|";
+  }
+  12.5714285714286% {
+    content: "Larry D|";
+  }
+  13.1428571428571% {
+    content: "Larry |";
+  }
+  13.7142857142857% {
+    content: "Larry|";
+  }
+  14.2857142857143% {
+    content: "Larr|";
+  }
+  14.8571428571429% {
+    content: "Lar|";
+  }
+  15.4285714285714% {
+    content: "La|";
+  }
+  16% {
+    content: "L|";
+  }
+  16.5714285714286% {
+    content: "|";
+  }
+  17.1428571428571% {
+    content: "D|";
+  }
+  17.7142857142857% {
+    content: " De|";
+  }
+  18.2857142857143% {
+    content: " Dev|";
+  }
+  18.8571428571429% {
+    content: " Deve|";
+  }
+  19.4285714285714% {
+    content: " Devel|";
+  }
+  20% {
+    content: " Develo|";
+  }
+  20.5714285714286% {
+    content: "Develop|";
+  }
+  21.1428571428571% {
+    content: " Develope|";
+  }
+  21.7142857142857% {
+    content: " Developer|";
+  }
+  22.2857142857143% {
+    content: " Developer| ";
+  }
+  22.8571428571429% {
+    content: " Developer| ";
+  }
+  23.4285714285714% {
+    content: " Developer| ";
+  }
+  24% {
+    content: " Developer| ";
+  }
+  24.5714285714286% {
+    content: " Developer| ";
+  }
+  25.1428571428572% {
+    content: " Developer| ";
+  }
+  25.7142857142857% {
+    content: " Developer| ";
+  }
+  26.2857142857143% {
+    content: " Developer|";
+  }
+  26.8571428571429% {
+    content: " Developer| ";
+  }
+  27.4285714285715% {
+    content: " Developer| ";
+  }
+  28% {
+    content: " Developer| ";
+  }
+  28.5714285714286% {
+    content: " Developer| ";
+  }
+  29.1428571428572% {
+    content: " Developer| ";
+  }
+  29.7142857142857% {
+    content: " Developer| ";
+  }
+  30.2857142857143% {
+    content: " Developer| ";
+  }
+  30.8571428571429% {
+    content: " Developer| ";
+  }
+  31.4285714285715% {
+    content: " Developer| ";
+  }
+  32% {
+    content: " Developer| ";
+  }
+  32.5714285714286% {
+    content: " Developer| ";
+  }
+  33.1428571428572% {
+    content: " Developer| ";
+  }
+  33.7142857142857% {
+    content: " Developer| ";
+  }
+  34.2857142857143% {
+    content: " Developer| ";
+  }
+  34.8571428571429% {
+    content: " Developer| ";
+  }
+  35.4285714285715% {
+    content: " Developer| ";
+  }
+  36% {
+    content: " Developer| ";
+  }
+  36.5714285714286% {
+    content: " Developer| ";
+  }
+  37.1428571428572% {
+    content: " Developer| ";
+  }
+  37.7142857142857% {
+    content: " Developer| ";
+  }
+  38.2857142857143% {
+    content: " Developer| ";
+  }
+  38.8571428571429% {
+    content: " Developer| ";
+  }
+  39.4285714285714% {
+    content: " Developer| ";
+  }
+  40% {
+    content: " Developer| ";
+  }
+  40.5714285714286% {
+    content: " Developer| ";
+  }
+  41.1428571428571% {
+    content: " Developer| ";
+  }
+  41.7142857142857% {
+    content: " Developer| ";
+  }
+  42.2857142857143% {
+    content: " Developer| ";
+  }
+  42.8571428571429% {
+    content: " Developer| ";
+  }
+  43.4285714285714% {
+    content: " Developer| ";
+  }
+  44% {
+    content: " Developer| ";
+  }
+  44.5714285714286% {
+    content: " Develope|";
+  }
+  45.1428571428571% {
+    content: " Develop|";
+  }
+  45.7142857142857% {
+    content: " Develo|";
+  }
+  46.2857142857143% {
+    content: " Devel|";
+  }
+  46.8571428571428% {
+    content: " Deve|";
+  }
+  47.4285714285714% {
+    content: " Dev|";
+  }
+  48% {
+    content: " De|";
+  }
+  48.5714285714285% {
+    content: " D|";
+  }
+  49.1428571428571% {
+    content: "D|";
+  }
+  49.7142857142857% {
+    content: "De|";
+  }
+  50.2857142857143% {
+    content: "Des|";
+  }
+  50.8571428571428% {
+    content: "Desi|";
+  }
+  51.4285714285714% {
+    content: "Desig|";
+  }
+  52% {
+    content: "Design|";
+  }
+  52.5714285714285% {
+    content: "Designe|";
+  }
+  53.1428571428571% {
+    content: "Designer  ";
+  }
+  53.7142857142857% {
+    content: "Designer|  ";
+  }
+  54.2857142857142% {
+    content: "Designer|  ";
+  }
+  54.8571428571428% {
+    content: "Designer|  ";
+  }
+  55.4285714285714% {
+    content: "Designer|  ";
+  }
+  56% {
+    content: "Designer|  ";
+  }
+  56.5714285714285% {
+    content: "Designer|  ";
+  }
+  57.1428571428571% {
+    content: "Designer|  ";
+  }
+  57.7142857142857% {
+    content: "Designer|  ";
+  }
+  58.2857142857142% {
+    content: "Designer|  ";
+  }
+  58.8571428571428% {
+    content: "Designer|  ";
+  }
+  59.4285714285714% {
+    content: "Designer|  ";
+  }
+  59.9999999999999% {
+    content: "Designer|  ";
+  }
+  60.5714285714285% {
+    content: "Designer| ";
+  }
+  61.1428571428571% {
+    content: "Designer|  ";
+  }
+  61.7142857142856% {
+    content: "Designer|  ";
+  }
+  62.2857142857142% {
+    content: "Designer|  ";
+  }
+  62.8571428571428% {
+    content: "Designer|  ";
+  }
+  63.4285714285714% {
+    content: "Designer|  ";
+  }
+  63.9999999999999% {
+    content: "Designer|  ";
+  }
+  64.5714285714285% {
+    content: "Designer|  ";
+  }
+  65.1428571428571% {
+    content: "Designer|  ";
+  }
+  65.7142857142856% {
+    content: "Designer|  ";
+  }
+  66.2857142857142% {
+    content: "Designer|  ";
+  }
+  66.8571428571428% {
+    content: "Designer|  ";
+  }
+  67.4285714285713% {
+    content: "Designer|  ";
+  }
+  67.9999999999999% {
+    content: "Designer|  ";
+  }
+  68.5714285714285% {
+    content: "Designer|  ";
+  }
+  69.1428571428571% {
+    content: "Designer|  ";
+  }
+  69.7142857142856% {
+    content: "Designer|  ";
+  }
+  70.2857142857142% {
+    content: "Designer| ";
+  }
+  70.8571428571428% {
+    content: "Designer|  ";
+  }
+  71.4285714285713% {
+    content: "Designer|  ";
+  }
+  71.9999999999999% {
+    content: "Designer|  ";
+  }
+  72.5714285714285% {
+    content: "Designer|  ";
+  }
+  73.142857142857% {
+    content: "Designer|  ";
+  }
+  73.7142857142856% {
+    content: "Designer|  ";
+  }
+  74.2857142857142% {
+    content: "Designer|  ";
+  }
+  74.8571428571427% {
+    content: "Designer|  ";
+  }
+  75.4285714285713% {
+    content: "Designer|  ";
+  }
+  75.9999999999999% {
+    content: "Designe|";
+  }
+  76.5714285714285% {
+    content: "Design|";
+  }
+  77.142857142857% {
+    content: "Desig|";
+  }
+  77.7142857142856% {
+    content: "Desi|";
+  }
+  78.2857142857142% {
+    content: "Des|";
+  }
+  78.8571428571427% {
+    content: "De|";
+  }
+  79.4285714285713% {
+    content: "D|";
+  }
+  79.9999999999999% {
+    content: "L|";
+  }
+  80.5714285714284% {
+    content: "La|";
+  }
+  81.142857142857% {
+    content: "Lar|";
+  }
+  81.7142857142856% {
+    content: "Larr|";
+  }
+  82.2857142857141% {
+    content: "Larry|";
+  }
+  82.8571428571427% {
+    content: "Larry| ";
+  }
+  83.4285714285713% {
+    content: "Larry D|";
+  }
+  83.9999999999999% {
+    content: "Larry Da|";
+  }
+  84.5714285714284% {
+    content: "Larry Dan|";
+  }
+  85.142857142857% {
+    content: "Larry Dani|";
+  }
+  85.7142857142856% {
+    content: "Larry Danie|";
+  }
+  86.2857142857141% {
+    content: "Larry Daniel|";
+  }
+  86.8571428571427% {
+    content: "Larry Daniels| ";
+  }
+  87.4285714285713% {
+    content: "Larry Daniels| ";
+  }
+  87.9999999999998% {
+    content: "Larry Daniels| ";
+  }
+  88.5714285714284% {
+    content: "Larry Daniels| ";
+  }
+  89.142857142857% {
+    content: "Larry Daniels| ";
+  }
+  89.7142857142856% {
+    content: "Larry Daniels| ";
+  }
+  90.2857142857141% {
+    content: "Larry Daniels| ";
+  }
+  90.8571428571427% {
+    content: "Larry Daniels| ";
+  }
+  91.4285714285713% {
+    content: "Larry Daniels| ";
+  }
+  91.9999999999998% {
+    content: "Larry Daniels| ";
+  }
+  92.5714285714284% {
+    content: "Larry Daniels| ";
+  }
+  93.142857142857% {
+    content: "Larry Daniels| ";
+  }
+  93.7142857142855% {
+    content: "Larry Daniels| ";
+  }
+  94.2857142857141% {
+    content: "Larry Daniels| ";
+  }
+  94.8571428571427% {
+    content: "Larry Daniels| ";
+  }
+  95.4285714285712% {
+    content: "Larry Daniels| ";
+  }
+  95.9999999999998% {
+    content: "Larry Daniels| ";
+  }
+  96.5714285714284% {
+    content: "Larry Daniels| ";
+  }
+  97.142857142857% {
+    content: "Larry Daniels| ";
+  }
+  97.7142857142855% {
+    content: "Larry Daniels| ";
+  }
+  98.2857142857141% {
+    content: "Larry Daniels| ";
+  }
+  98.8571428571427% {
+    content: "Larry Daniels| ";
+  }
+  99.4285714285712% {
+    content: "Larry Daniels| ";
+  }
+  99.9999999999998% {
+    content: "LarryDaniels|";
+  }
+}
+
+/*! End Home Style */
+
+/*? About Style */
+
+.about .about-img {
+  padding: 0 0 0 1.875rem;
+}
+.about .about-img:after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 0;
+  bottom: -1.875rem;
+  background-image: url(../Images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+.about .content h3 {
+  font-weight: 800;
+  margin-bottom: 0.3125rem;
+  font-size: 1.875rem;
+}
+.about .content .about-title {
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.about .skills h6 {
+  font-size: 13px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.pr {
+  padding-right: 120px;
+}
+
+.pr1 {
+  padding-right: 55px;
+}
+
+.about .skills .skills-progress {
+  width: 100%;
+  height: 22px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  position: relative;
+}
+
+.about .skills .skills-progress .spnn1,
+.about .skills .skills-progress .spnn2,
+.about .skills .skills-progress .spnn3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #1c1c1c;
+  transition: all 1s;
+  color: #fff;
+}
+.about .skills .skills-progress .spnn1 {
+  animation: spnn1 alternate 1s 1s;
+}
+
+@keyframes spnn1 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 95%;
+  }
+}
+
+.about .skills .skills-progress .spnn2 {
+  animation: spnn2 alternate 1s 1s;
+}
+
+@keyframes spnn2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+.about .skills .skills-progress .spnn3 {
+  animation: spnn3 alternate 1s 1s;
+}
+
+@keyframes spnn3 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+.about .content .btn-bg {
+  color: #1c1c1c;
+  background-color: transparent !important;
+}
+
+.about .content .btn-bg:hover {
+  color: #eee !important;
+  background-color: #1c1c1c !important;
+}
+
+/*? End About Style */
+
+/*~ Services Style */
+
+.services .item {
+  padding: 50px 20px;
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.services .item:hover .icon {
+  background: #1c1c1c;
+  color: #eee;
+}
+
+.services .item .icon {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  background: #f4f4f4;
+  transition: all 0.5s;
+}
+
+.services .item h6 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/*~ End Services Style */
+
+/** Portfolio Style */
+
+.works .nav-pills .nav-link.active,
+.works .nav-pills .nav-link:hover {
+  background-color: transparent;
+  color: #222222;
+}
+.works .nav-pills .nav-link {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50px;
+  margin: 0;
+  transition: 0.5s;
+  position: relative;
+}
+
+.works .nav-pills .nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 35px;
+  left: 0;
+  color: #000;
+  background-color: #222222;
+  transition: all 1s;
+  animation: nav-b-border 0.9s alternate;
+}
+
+@keyframes nav-b-border {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.works .item-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.works .item-image h6 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+  margin-bottom: 15px;
+  transform: translateY(-15px);
+  transition: all 0.5s;
+}
+.works .item-image .icon i {
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  background: #111;
+  color: #eee;
+}
+.works .item-image .icon i:hover {
+  background: transparent;
+  color: #000;
+}
+.works .item-layer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 11;
+  transform: translateY(10px);
+}
+
+.works .item-image:hover .item-layer {
+  opacity: 1;
+  transform: translateY(0);
+}
+.works .item-image:hover h6,
+.works .item-image:hover .info-icons {
+  transform: translateY(0);
+}
+
+/** End Portfolio Style */
+
+/*& Clients Style */
+
+/*~ Carousel Style */
+
+.carousel-indicators [data-bs-target] {
+  all: unset;
+  width: 10px;
+  height: 10px;
+  background: rgb(214, 214, 214);
+  opacity: 0.7;
+  margin-inline: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.carousel-indicators .active,
+.carousel-indicators button:hover {
+  opacity: 1;
+  cursor: pointer;
+  background: #869791;
+}
+
+blockquote {
+  word-spacing: 2px;
+}
+
+.carousel-item p span {
+  font-size: 12px;
+  line-height: 17.1429px;
+}
+
+/*~ numbers Style */
+
+.numbers .icon i {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.numbers h3 {
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+.numbers p {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+/*& End Clients Style */
+
+/*^ Team Style */
+
+.team-area {
+  background-color: rgba(52, 52, 52, 0.8);
+  margin-bottom: 10px;
+}
+.team-area:hover .social-icons {
+  cursor: pointer;
+  opacity: 1;
+  transform: rotateY(0deg) scale(1, 1);
+}
+
+.image-area img {
+  transition: all 0.4s ease 0s;
+}
+
+.image-area:hover img {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .image-area img {
+    display: inline-block;
+  }
+}
+.image-area .social-icons {
+  background-color: rgba(255, 255, 255, 0.95);
+  inset: 5px;
+  opacity: 0;
+  transition: 0.5s;
+  transform: rotateY(180deg) scale(0.5, 0.5);
+}
+.image-area .social-icons ul {
+  top: 175px;
+}
+.image-area .social-icons ul li a {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+.image-area .social-icons ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*^ End Team Style */
+
+/** Contact Style */
+
+.contact .item:hover .icon {
+  background: #1c1c1c;
+  color: #eee;
+}
+.contact .item .icon {
+  font-size: 25px;
+  margin-bottom: 15px;
+  width: 3.75rem;
+  height: 3.75rem;
+  line-height: 60px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.contact .item .icon i {
+  line-height: 25px;
+  font-size: 25px;
+}
+.contact .item h6 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #f7f7f7;
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 5px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: #f7f7f7;
+  border-color: 0;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+
+.w-fixed {
+  width: 88%;
+}
+
+@media (max-width: 768px) {
+  .w-fixed {
+    width: 100%;
+  }
+}
+
+/** End Contact Style */
+
+/*! Footer Style */
+
+footer {
+  padding: 30px;
+}
+
+footer p {
+  font-size: 13px;
+  word-spacing: 2px;
+}
+
+/*! End Footer Style */
